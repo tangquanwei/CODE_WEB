@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <style>
+        /* 标签选择器{样式}  :选择标签*/
+        
+        p {
+            color: rgb(255, 0, 0);
+            font-size: 16px;
+            font-family: fantasy;
+        }
+        
+        h1 {
+            color: green;
+            font-family: Jetbrains Mono;
+        }
+        
+        div {
+            color: pink;
+        }
+        /* 类选着器 */
+        
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">my first page</h1>
+    <h2>写代码很快乐</h2>
+    <h3>很快乐</h3>
+    <h4>快乐</h4>
+    <h5>快</h5>
+    <h6>乐</h6>
+    <b>加粗</b>
+    <br />
+    <strong>加粗</strong>
+    <br />
+    <em>倾斜</em>
+    <br />
+    <i>倾斜</i>
+    <del>删除线</del>
+    <br />
+    <u>下划线</u>
+    <br />
+    <p>
+        写代码很快乐
+    </p>
+    <br />
+    <p>
+        写代码很快乐
+    </p>
+    <br />
+    <p>
+        I love Coding
+    </p>
+    <div>div标签单独占一行</div>
+    <div>
+        <!-- <a href="url" target="_blank">bilibili</a> 超链接 _blink新窗口打开-->
+        <a href="https://www.bilibili.com/video/BV14J4114768?p=26&spm_id_from=pageDriver" target="blank">外部链接Bilibili</a><br />
+        <a href="other.html" target="blank">内部链接 To Other</a><br />
+        <a href="#1">锚点链接 Goto Photo</a><br />
+    </div>
+    <!-- 分割 -->
+    <span class=red>span </span>
+    <span class=red>可以 </span>
+    <span class=red>多个 </span>
+    <span class=red>一行 </span>
+    <!-- 跨度 -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- 表格 -->
+    <table align="center">
+        <tr>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+            <th>Forth</th>
+            <th colspan='2'>Fivth</th>
+        </tr>
+        <tr>
+            <td>单元格中的文字</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td rowspan="2">5</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <!-- 无序列表 -->
+    <!-- <ul> 里只放li -->
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <!-- 自定义列表 -->
+    <dl>
+        <dt>关注我们</dt>
+        <dd>新浪微博</dd>
+        <dd>官方微信</dd>
+        <dd>联系我们</dd>
+    </dl>
+    <!-- 表单:把表单信息送到后台 -->
+    <form action="#" method="post" name="post" value="post">
+        username : <input type="text" name="username" maxlength="20">
+        <br /> password : <input type="password" name="password">
+        <!-- 单选按钮和复选框要有相同的name -->
+        <br> gender : <label for="male">male</label><input id="male" type="radio" name="gender" value="male">
+        <label for="female">female</label><input id="female" type="radio" name="gender" value="female">
+        <!-- chacked 默认选择 -->
+        <br /> agree:<input type="checkbox" name="agree" value="agree" checked="checked">
+        <br /> 籍贯:
+        <select>
+            <option>四川</option>
+            <option>江西</option>
+            <option>甘肃</option>
+            <option>新疆</option>
+            <option selected="selected">火星</option>
+        </select>
+        <br /> 留言：
+        <textarea cols="20" rows="5">
+            Please
+        </textarea>
+        <br /><input type="reset" value="reset">
+        <br /><input type="submit" value="免费注册">
+        <br /><input type="button" value="send message">
+    </form>
+    <br />
+    <a href="#h1">锚点链接 Goto H1</a><br />
+    <!-- border 设置边框 -->
+    <!-- <img id="1" src="img/7.jpg" alt="图片显示不出时，输出" title="我&崽" width="200" height="200" border="5"> -->
+</body>
+
+</html>
