@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+
+            $("#animate1").click(function () {
+                $("#animatediv").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+            $("#animate2").click(function () {
+                $("#animatediv").animate({ right: '250px' });
+            });
+
+            $("#animate3").click(function () {
+                var div = $("#animatediv");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+        });
+    </script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+        }
+
+        #animatediv {
+            /* 默认HTML元素有一个静态且不可移动的位置
+            如需改变，要将元素的 position 属性设置为 
+            relative, fixed, 或 absolute */
+            background: #98bf21;
+            height: 100px;
+            width: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <div>
+            <button id="flip">下拉栏</button>
+            <div id="panel" hidden>
+                Hello Quanwei
+            </div>
+        </div>
+        <span>
+            <button id="animate1">动画1</button>
+            <button id="animate2">动画2</button>
+            <button id="animate3">动画3</button>
+        </span>
+        <div id="animatediv">
+<!--             Quanwei -->
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

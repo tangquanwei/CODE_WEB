@@ -1,0 +1,12 @@
+body {
+  background-size: 1920px 1080px;
+  background: url(/img/backiee-189646.jpg) repeat-y center;
+}
+pre {
+  font-family: "YouYuan", ui-serif;
+  font-size: x-large;
+  color: rgb(250, 0, 255);
+  font-style: italic;
+  font-weight: bold;
+  line-height: 2;
+}

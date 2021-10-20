@@ -1,0 +1,163 @@
+<!-- 
+    $(DOM)  Dom -> jQuery
+    $[下标]  jQuery -> BOM
+
+    jQuery在页面加载完成后依次执行,
+    原生js在jQuery之后执行且只执行最后一次赋值函数(window=)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- 导入 -->
+    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            //id选择器
+            $("#bt01").click(function () {
+                $("#bt01").css("background-color", "red");
+                // alert("JQ");
+            });
+
+            $("#bt02").click(function () {
+                //选择 id="ip01"
+                $("#ip01").css("background-color", "blue");
+                //选择 class="mini"
+                $(".mini").css("background-color", "yellow");
+            });
+
+            $("#bt03").click(
+                function () {
+                    $("span").css("background-color", "violet")
+                    $("div").css("background-color", "violet")
+                });
+            $("#bt04").click(function () {
+                $("*").css("background-color", "green");
+                alert("match all");
+            });
+
+            /**
+             * 动画
+             * 参数
+             * 1.执行时长,毫秒
+             * 2.回调函数
+             * show()
+             * hide()
+             * toggle()  可见就隐藏不可见就显示
+             * 
+             * fadeIn()
+             * fadeOut()
+             * fadeTo()
+             * fadeToggle()
+             */
+            var $div1 = $("#div1");
+            $div1.css("background-color", "yellow");
+            $("#bt08").click(function () {
+                $div1.show(1000);
+            });
+            $("#bt09").click(function () {
+                $div1.hide(1000, function () {
+                    alert('hide finish');
+                });
+            });
+            $("#bt10").click(function () {
+                $div1.toggle();
+            });
+            $("#bt11").click(function () {
+                $div1.fadeIn(1000);
+            });
+            $("#bt12").click(function () {
+                $div1.fadeOut();
+            });
+            $("#bt13").click(function () {
+                // 在指定时长内将透明度修改到指定值
+                $div1.fadeTo(2000, 0.5);
+            });
+            $("#bt14").click(function () {
+                $div1.fadeToggle();
+            });
+
+            // <div class="SubCategoryBox">
+            $("li:gt(0):not(:last)").hide();
+            $("li:last").click(function () {
+                $("li:gt(0):not(:last)").toggle();
+            });
+
+            $("img").click(function () {
+                alert('喵~');
+            });
+            $("img").mouseover(function () {
+                $("img").width(500)
+                $("img").height(500);
+            });
+            $("img").mouseleave(function () {
+                $("img").width(250)
+                $("img").height(250);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <span>
+        <button id="bt01">这是一个按钮</button>
+        <button id="bt02">这也是一个按钮</button>
+        <button id="bt03">这还是一个按钮</button>
+        <button id="bt04">这当然是一个按钮</button>
+        <button id="bt05">这肯定是一个按钮啊</button>
+        <button id="bt06">你在想什么呢</button>
+        <button id="bt07">脑子嗡嗡的吧</button>
+    </span>
+    <div>
+        <input type="text" id="ip01" class="mini">
+        <input type="text" class="mini">
+        <input type="text" class="mini">
+        <input type="text" class="mini">
+    </div>
+    <div>
+        <button id="bt08">SHOW</button>
+        <button id="bt09">HIDE</button>
+        <button id="bt10">TOGGLE</button>
+        <button id="bt11">fadeIn</button>
+        <button id="bt12">fadeOut</button>
+        <button id="bt13">fadeTo</button>
+        <button id="bt14">fadeToggle</button>
+    </div>
+    <div id="div1">
+        <p>test jQuery 动画 :)</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="SubCategoryBox">
+        <ul>
+            <li><a href="#">唐权威 <i>(1 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(2 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(3 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(4 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(5 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(6 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(7 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(8 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(9 /10)</i> </a></li>
+            <li><a href="#">唐权威 <i>(10/10)</i> </a></li>
+            <li><a href="#">+其他 </a></li>
+        </ul>
+    </div>
+    <div>
+        <img src="../img/猫咪.png" alt="miaomi">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "CODE_WEB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangquanwei/CODE_WEB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tangquanwei/CODE_WEB/issues"
+  },
+  "homepage": "https://github.com/tangquanwei/CODE_WEB#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "jsdom": "^17.0.0"
+  }
+}

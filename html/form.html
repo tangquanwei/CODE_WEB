@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--from 标签用来创建表单
+        action="服务器地址" method="提交的方式 get有长度限制 post没有" 
+        input 标签用来创建表单项，type 值就是收集的数据的类型
+        type 值为 submit 的按钮为提交按钮，
+        点击时 form 表单会收集有 name 属性的表单项数 据提交给 action 中的地址
+    -->
+    <form action="localhost:8080" method="GET">
+        <input type="hidden" name="action" value="login">
+        <h1 align="center">用户注册</h1>
+        <table align="center">
+            <tr>
+                <td>用户:</td>
+                <td><input type="text" name="username" /></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input name="passwd" type="password" /></td>
+            </tr>
+            <tr>
+                <td>性别:</td>
+                <td>
+                    <input type="radio" name="gender" checked="checked" value="male" />男
+                    <input type="radio" name="gender" value="female" />女
+                </td>
+            </tr>
+            <tr>
+                <td>兴趣爱好:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="java" />Java
+                    <input type="checkbox" name="hobby" value="python" />Python
+                    <input type="checkbox" name="hobby" value="cpp" />C++
+                </td>
+            </tr>
+            <tr>
+                <td>国籍:</td>
+                <td>
+                    <select name="country">
+                        <option value="none">请选择国籍</option>
+                        <option value="China" selected="selected">中国</option>
+                        <option value="America">美国</option>
+                        <option value="Japan">日本</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我评价:</td>
+                <td><textarea rows="2" cols="20" name="selfinfo">请输入自我评价</textarea></td>
+            </tr>
+
+            <tr align="center">
+                <td>
+                    <input type="reset" value="取消">
+                </td>
+                <td>
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

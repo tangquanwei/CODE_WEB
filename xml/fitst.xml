@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--XML 被设计用来传输和存储数据，其焦点是数据的内容-->
+<!--XML 标签对大小写敏感-->
+<!--XML 属性值必须加引号-->
+<note>
+    <body>
+        XML 命名规则
+        XML 元素必须遵循以下命名规则：
+
+        名称可以包含字母、数字以及其他的字符
+        名称不能以数字或者标点符号开始
+        名称不能以字母 xml（或者 XML、Xml 等等）开始
+        名称不能包含空格
+
+        XSLT 是首选的 XML 样式表语言。
+
+        XSLT（eXtensible Stylesheet Language Transformations）远比 CSS 更加完善。
+
+        XSLT 是在浏览器显示 XML 文件之前，先把它转换为 HTML
+    </body>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+</note>
